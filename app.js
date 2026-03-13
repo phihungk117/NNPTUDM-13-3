@@ -25,13 +25,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-mongoose.connect('mongodb://localhost:27017/NNPTUD-C6');
-mongoose.connection.on('connected', function () {
-  console.log("connected");
-})
-mongoose.connection.on('disconnected', function () {
-  console.log("disconnected");
-})
+// mongoose.connect('mongodb://localhost:27017/NNPTUD-C6');
+// mongoose.connection.on('connected', function () {
+//   console.log("connected");
+// })
+// mongoose.connection.on('disconnected', function () {
+//   console.log("disconnected");
+// })
 
 app.use('/', require('./routes/index'));
 app.use('/api/v1/users', require('./routes/users'));
